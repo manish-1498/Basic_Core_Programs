@@ -4,10 +4,10 @@ namespace CSHARP_basic_core_programs
 {
     class Program
     {
-        static void Main(string[] args)
+        public void Viewprogram()
         {
+
             Console.WriteLine("WELCOME TO THE BASIC CORE PROGRAM");
-            Console.WriteLine("enter the option");
             Console.WriteLine("1. FlipCoin Program\n" +
                 "2.Leap year program\n" +
                 "3.Power of Two\n" +
@@ -18,7 +18,7 @@ namespace CSHARP_basic_core_programs
                 "8.Vowel or consonant\n" +
                 "9.Even or odd\n" +
                 "10.Greatest of three\n");
-
+            Console.WriteLine("enter the option");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -66,6 +66,19 @@ namespace CSHARP_basic_core_programs
                     Console.WriteLine("enter correct option");
                     break;
             }
+            Console.WriteLine("\nWANTS TO SEE ANOTHER PROGRAM,IF YES PRESS Y OR ELSE N");
+            Char ch = Convert.ToChar(Console.ReadLine());
+            if (ch == 'Y' || ch == 'y')
+                Viewprogram();
+            else
+                Console.WriteLine("OK Bye");
+            
+
+        }
+        static void Main(string[] args)
+        {
+            Program program = new Program();
+            program.Viewprogram();
 
         }
     }
